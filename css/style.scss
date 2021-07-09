@@ -206,7 +206,7 @@ html,body {
 	}
 }
 
-/* ------ Footer ------ */
+/* ------ Types ------ */
 
 .types {
 	padding: 100px 0;
@@ -239,6 +239,49 @@ html,body {
 					font-size: 24px;
 					font-weight: 500;
 				}
+			}
+		}
+	}
+}
+
+/* ------ Text ------ */
+
+.text {
+	color: #6C6C6C;
+
+	padding: 100px 0;
+
+	.text__body {
+		.text__title {
+			color: $dark;
+			text-align: center;
+			font-size: 36px;
+			font-weight: 700;
+			margin: 0px 0px 100px 0px;
+		}
+		.text__columns {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+			.text__column {
+				.text__text {
+					max-width: 540px;
+				}
+				.text__text p {
+					margin: 0px 0px 20px 0px;
+				}
+				.text__text span {
+					font-weight: 500;
+				}
+
+				.text__img {
+					max-width: 540px;
+					margin: 0px 0px 20px 0px;
+				}
+				.text__img img {
+					width: 100%;
+				}
+
 			}
 		}
 	}
