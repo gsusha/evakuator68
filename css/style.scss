@@ -96,12 +96,17 @@ html,body {
 			.header__phone-icon {
 				display: none;
 			}
-			.header__insta {
-				max-width: 40px;
+			.header__insta a {
+				width: 28px;
+				height: 28px;
 				margin: 0px 0px 0px 20px;
+				display: block;
+				background: $light;
+  			mask-image: url('../img/insta.svg');
 			}
-			.header__insta img {
-				width: 100%;
+			.header__insta a:hover{
+				background: $yellow;
+				transition: 0.5s ease 0s;
 			}
 
 			@media (max-width: 460px) {
@@ -281,6 +286,7 @@ html,body {
 		.advantages__subtitle {
 			font-family: "Roboto";
 			max-width: 900px;
+			line-height: 22px;
 
 			margin: 0px 0px 100px 0px;
 		}
@@ -351,7 +357,6 @@ html,body {
 				flex-direction: column;
 				align-items: center;
 				margin: 0px 50px 80px 50px;
-				transition: all 0.5s ease 0s;
 
 				.types__img {
 					width: 40px;
@@ -464,13 +469,14 @@ html,body {
 	.footer__body {
 		display: flex;
 		align-items: center;
-		margin: 0px -60px;
+		margin: 0px -20px;
 
 		.footer__info {
-			margin: 0px 60px;
+			flex: 1 0 50%;
+			margin: 0px 20px;
 			.footer__title {
 				font-family: "Russo One";
-				font-size: 36px;
+				font-size: 32px;
 				margin: 0px 0px 20px 0px;
 			}
 			.footer__phone {
@@ -503,7 +509,7 @@ html,body {
 			}
 		}
 		.footer__offer {
-			margin: 0px 60px;
+			margin: 0px 20px;
 			color: #615F5F;
 			font-size: 12px;
 			line-height: 1.5;
@@ -517,9 +523,6 @@ html,body {
 
 			.footer__info {
 				margin: 0px 0px 60px 0px;
-				.footer__title {
-					font-size: 32px;
-				}
 			}
 			.footer__offer {
 				margin: 0;
