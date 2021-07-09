@@ -70,8 +70,14 @@ html,body {
 			.header__img img {
 				width: 100%;
 			}
-			.header__name {
+			.header__name a {
+				text-decoration: none;
+				color: $light;
 				font-size: 18px;
+			}
+			.header__name a:hover {
+				color: $yellow;
+				transition: 0.5s ease 0s;
 			}
 		}
 
@@ -83,6 +89,13 @@ html,body {
 				text-decoration: none;
 				color: $light;
 			}
+			.header__phone a:hover {
+				color: $yellow;
+				transition: 0.5s ease 0s;
+			}
+			.header__phone-icon {
+				display: none;
+			}
 			.header__insta {
 				max-width: 40px;
 				margin: 0px 0px 0px 20px;
@@ -90,6 +103,21 @@ html,body {
 			.header__insta img {
 				width: 100%;
 			}
+
+			@media (max-width: 460px) {
+				.header__phone {
+					display: none;
+				}
+				.header__phone-icon {
+					max-width: 40px;
+					display: block;
+					margin: 0px 0px 0px 10px;
+				}
+				.header__phone-icon img {
+					width: 100%;
+				}
+			}
+
 		}
 
 	}
@@ -121,6 +149,10 @@ html,body {
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: center;
+
+			position: relative;
+			left: 1000px;
+			top: -600px;
 
 			.home__title {
 				font-family: "Russo One";
@@ -154,15 +186,51 @@ html,body {
 			align-self: center;
 			min-width: 700px;
 
-			/*  для грида
-			position: absolute;
-			top: 15%;
-			left: 40%; */
+			position: relative;
+			left: 1000px;
+			top: -600px;
 		}
+
 		.home__img img {
 			width: 100%;
 		}
 	}
+
+	@media(max-width: 767px){
+		.home__body {
+			.home__img {
+				display: none;
+			}
+		}
+	}
+
+	@media(max-width: 460px) {
+		.home__body {
+			.home__text {
+				.home__title {
+					font-size: 44px;
+				}
+				.home__subtitle {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	@media(max-width: 360px) {
+		.home__body {
+			.home__text {
+				.home__title {
+					font-size: 36px;
+				}
+				.home__subtitle {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+
 }
 
 
@@ -221,12 +289,41 @@ html,body {
 			display: inline-block;
 			text-decoration: none;
 			background: $yellow;
-			color: $light;
+			color: $dark;
 			padding: 14px 40px;
 			border-radius: 5px;
 			font-family: "Russo One";
 		}
+		.advantages__btn a:hover {
+			background: #FFD86C;
+			transition: 0.5s ease 0s;
+		}
 	}
+
+	@media(max-width: 767px) {
+		.advantages__body {
+			.advantages__title {
+				font-size: 26px;
+			}
+			.advantages__icons {
+				flex-direction: column;
+				.advantages__icon {
+					margin: 0px 0px 40px 0px;
+					.advantages__img {}
+					.advantages__text {}
+				}
+			}
+			.advantages__price {
+				font-size: 26px;
+			}
+			.advantages__subtitle {
+				text-align: left;
+				line-height: 22px;
+			}
+			.advantages__btn {}
+		}
+	}
+
 }
 
 /* ------ Types ------ */
@@ -243,17 +340,22 @@ html,body {
 			margin: 0px 0px 100px 0px;
 		}
 		.types__icons {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+
 			margin: 0px -50px;
+
 			.types__icon {
 				display: flex;
+				flex-direction: column;
 				align-items: center;
 				margin: 0px 50px 80px 50px;
 
 				.types__img {
 					width: 40px;
-					margin: 0px 80px 0px 0px;
+					margin: 0px 0px 30px 0px;
 				}
 				.types-img img {
 					width: 100%;
@@ -265,6 +367,15 @@ html,body {
 			}
 		}
 	}
+
+	@media (max-width: 767px) {
+		.types__body {
+			.types__title {
+				font-size: 26px;
+			}
+		}
+	}
+
 }
 
 /* ------ Text ------ */
@@ -285,8 +396,9 @@ html,body {
 		.text__columns {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-
+		margin: 0px -10px;
 			.text__column {
+				margin: 0px 10px;
 				.text__text {
 					max-width: 540px;
 				}
@@ -304,10 +416,42 @@ html,body {
 				.text__img img {
 					width: 100%;
 				}
-
 			}
 		}
 	}
+
+	@media (max-width: 767px) {
+		.text__body {
+			.text__title {
+				font-size: 26px;
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		.text__body {
+			.text__columns {
+				.text__column {
+					.text__text {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 380px) {
+		.text__body {
+			.text__columns {
+				.text__column {
+					.text__text {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
 }
 
 /* ------ Footer ------ */
@@ -320,10 +464,10 @@ html,body {
 	.footer__body {
 		display: flex;
 		align-items: center;
-		margin: 0px -100px;
+		margin: 0px -60px;
 
 		.footer__info {
-			margin: 0px 100px;
+			margin: 0px 60px;
 			.footer__title {
 				font-family: "Russo One";
 				font-size: 36px;
@@ -335,7 +479,11 @@ html,body {
 			}
 			.footer__phone a {
 				text-decoration: none;
+				color: $yellow;
+			}
+			.footer__phone a:hover {
 				color: $light;
+				transition: 0.5s ease 0s;
 			}
 			.footer__copyright {
 				margin: 0px 0px 20px 0px;
@@ -345,14 +493,49 @@ html,body {
 				margin: 0px 0px 20px 0px;
 			}
 			.footer__authors a {
-				color: $light;
+				color: $yellow;
 				text-decoration: none;
 				font-weight: 700;
 			}
+			.footer__authors a:hover {
+				color: $light;
+				transition: 0.5s ease 0s;
+			}
 		}
 		.footer__offer {
+			flex: 1 1 50%;
+			margin: 0px 60px;
 			color: #615F5F;
-			max-width: 550px;
+			font-size: 12px;
+			line-height: 1.5;
 		}
 	}
+
+	@media (max-width: 767px) {
+		.footer__body {
+			flex-direction: column;
+			margin: 0;
+
+			.footer__info {
+				margin: 0px 0px 60px 0px;
+				.footer__title {
+					font-size: 32px;
+				}
+			}
+			.footer__offer {
+				margin: 0;
+			}
+		}
+	}
+
+	@media (max-width: 460px) {
+		.footer__body {
+			.footer__info {
+				.footer__title {
+					font-size: 26px;
+				}
+			}
+		}
+	}
+
 }

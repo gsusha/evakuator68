@@ -141,8 +141,15 @@ html, body {
 .header .header__body .header__logo .header__img img {
   width: 100%;
 }
-.header .header__body .header__logo .header__name {
+.header .header__body .header__logo .header__name a {
+  text-decoration: none;
+  color: #FAFAFA;
   font-size: 18px;
+}
+.header .header__body .header__logo .header__name a:hover {
+  color: #FEC629;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
 }
 .header .header__body .header__contact {
   display: -webkit-box;
@@ -156,12 +163,33 @@ html, body {
   text-decoration: none;
   color: #FAFAFA;
 }
+.header .header__body .header__contact .header__phone a:hover {
+  color: #FEC629;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+.header .header__body .header__contact .header__phone-icon {
+  display: none;
+}
 .header .header__body .header__contact .header__insta {
   max-width: 40px;
   margin: 0px 0px 0px 20px;
 }
 .header .header__body .header__contact .header__insta img {
   width: 100%;
+}
+@media (max-width: 460px) {
+  .header .header__body .header__contact .header__phone {
+    display: none;
+  }
+  .header .header__body .header__contact .header__phone-icon {
+    max-width: 40px;
+    display: block;
+    margin: 0px 0px 0px 10px;
+  }
+  .header .header__body .header__contact .header__phone-icon img {
+    width: 100%;
+  }
 }
 
 /* ------ Home ------ */
@@ -198,6 +226,9 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  left: 1000px;
+  top: -600px;
 }
 .home .home__body .home__text .home__title {
   font-family: "Russo One";
@@ -230,13 +261,33 @@ html, body {
       -ms-grid-row-align: center;
       align-self: center;
   min-width: 700px;
-  /*  для грида
-  position: absolute;
-  top: 15%;
-  left: 40%; */
+  position: relative;
+  left: 1000px;
+  top: -600px;
 }
 .home .home__body .home__img img {
   width: 100%;
+}
+@media (max-width: 767px) {
+  .home .home__body .home__img {
+    display: none;
+  }
+}
+@media (max-width: 460px) {
+  .home .home__body .home__text .home__title {
+    font-size: 44px;
+  }
+  .home .home__body .home__text .home__subtitle {
+    font-size: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .home .home__body .home__text .home__title {
+    font-size: 36px;
+  }
+  .home .home__body .home__text .home__subtitle {
+    font-size: 18px;
+  }
 }
 
 /* ------ Advantages ------ */
@@ -302,10 +353,36 @@ html, body {
   display: inline-block;
   text-decoration: none;
   background: #FEC629;
-  color: #FAFAFA;
+  color: #1C1C1C;
   padding: 14px 40px;
   border-radius: 5px;
   font-family: "Russo One";
+}
+.advantages .advantages__body .advantages__btn a:hover {
+  background: #FFD86C;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+@media (max-width: 767px) {
+  .advantages .advantages__body .advantages__title {
+    font-size: 26px;
+  }
+  .advantages .advantages__body .advantages__icons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .advantages .advantages__body .advantages__icons .advantages__icon {
+    margin: 0px 0px 40px 0px;
+  }
+  .advantages .advantages__body .advantages__price {
+    font-size: 26px;
+  }
+  .advantages .advantages__body .advantages__subtitle {
+    text-align: left;
+    line-height: 22px;
+  }
 }
 
 /* ------ Types ------ */
@@ -330,16 +407,27 @@ html, body {
   margin: 0px 0px 100px 0px;
 }
 .types .types__body .types__icons {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0px -50px;
 }
 .types .types__body .types__icons .types__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -347,7 +435,7 @@ html, body {
 }
 .types .types__body .types__icons .types__icon .types__img {
   width: 40px;
-  margin: 0px 80px 0px 0px;
+  margin: 0px 0px 30px 0px;
 }
 .types .types__body .types__icons .types__icon .types-img img {
   width: 100%;
@@ -355,6 +443,11 @@ html, body {
 .types .types__body .types__icons .types__icon .types__text {
   font-size: 24px;
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  .types .types__body .types__title {
+    font-size: 26px;
+  }
 }
 
 /* ------ Text ------ */
@@ -374,6 +467,10 @@ html, body {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  margin: 0px -10px;
+}
+.text .text__body .text__columns .text__column {
+  margin: 0px 10px;
 }
 .text .text__body .text__columns .text__column .text__text {
   max-width: 540px;
@@ -391,6 +488,21 @@ html, body {
 .text .text__body .text__columns .text__column .text__img img {
   width: 100%;
 }
+@media (max-width: 767px) {
+  .text .text__body .text__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .text .text__body .text__columns .text__column .text__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 380px) {
+  .text .text__body .text__columns .text__column .text__text {
+    font-size: 12px;
+  }
+}
 
 /* ------ Footer ------ */
 .footer {
@@ -405,10 +517,10 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0px -100px;
+  margin: 0px -60px;
 }
 .footer .footer__body .footer__info {
-  margin: 0px 100px;
+  margin: 0px 60px;
 }
 .footer .footer__body .footer__info .footer__title {
   font-family: "Russo One";
@@ -421,7 +533,12 @@ html, body {
 }
 .footer .footer__body .footer__info .footer__phone a {
   text-decoration: none;
+  color: #FEC629;
+}
+.footer .footer__body .footer__info .footer__phone a:hover {
   color: #FAFAFA;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
 }
 .footer .footer__body .footer__info .footer__copyright {
   margin: 0px 0px 20px 0px;
@@ -431,11 +548,44 @@ html, body {
   margin: 0px 0px 20px 0px;
 }
 .footer .footer__body .footer__info .footer__authors a {
-  color: #FAFAFA;
+  color: #FEC629;
   text-decoration: none;
   font-weight: 700;
 }
+.footer .footer__body .footer__info .footer__authors a:hover {
+  color: #FAFAFA;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
 .footer .footer__body .footer__offer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  margin: 0px 60px;
   color: #615F5F;
-  max-width: 550px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .footer .footer__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .footer .footer__body .footer__info {
+    margin: 0px 0px 60px 0px;
+  }
+  .footer .footer__body .footer__info .footer__title {
+    font-size: 32px;
+  }
+  .footer .footer__body .footer__offer {
+    margin: 0;
+  }
+}
+@media (max-width: 460px) {
+  .footer .footer__body .footer__info .footer__title {
+    font-size: 26px;
+  }
 }
