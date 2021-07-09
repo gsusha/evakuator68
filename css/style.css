@@ -183,7 +183,6 @@ html, body {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
-  margin: 0px -50px;
 }
 .home .home__body .home__text {
   display: -webkit-box;
@@ -199,7 +198,6 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0px 50px;
 }
 .home .home__body .home__text .home__title {
   font-family: "Russo One";
@@ -228,9 +226,17 @@ html, body {
   transition: 0.5s ease 0s;
 }
 .home .home__body .home__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  min-width: 700px;
+  /*  для грида
   position: absolute;
   top: 15%;
-  left: 40%;
+  left: 40%; */
+}
+.home .home__body .home__img img {
+  width: 100%;
 }
 
 /* ------ Advantages ------ */

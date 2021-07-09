@@ -115,7 +115,6 @@ html,body {
 		grid-template-columns: 1fr 1fr;
 
 		height: 100vh;
-		margin: 0px -50px;
 
 		.home__text {
 			display: flex;
@@ -123,7 +122,6 @@ html,body {
 			align-items: flex-start;
 			justify-content: center;
 
-			margin: 0px 50px;
 			.home__title {
 				font-family: "Russo One";
 				text-transform: uppercase;
@@ -153,9 +151,16 @@ html,body {
 			}
 		}
 		.home__img {
+			align-self: center;
+			min-width: 700px;
+
+			/*  для грида
 			position: absolute;
 			top: 15%;
-			left: 40%;
+			left: 40%; */
+		}
+		.home__img img {
+			width: 100%;
 		}
 	}
 }
