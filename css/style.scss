@@ -43,6 +43,10 @@ html,body {
 /* ------ Header ------ */
 
 .header {
+	position: fixed; 
+	top: 0;
+	left: 0;
+	width: 100%;
 	padding: 16px 0;
 	background: $dark;
 
@@ -209,7 +213,7 @@ html,body {
 /* ------ Types ------ */
 
 .types {
-	padding: 100px 0;
+	padding: 100px 0px 0px 0px;
 	.types__body {
 		display: flex;
 		flex-direction: column;
