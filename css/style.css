@@ -227,8 +227,7 @@ html, body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  left: 1000px;
-  top: -600px;
+  left: -1000px;
 }
 .home .home__body .home__text .home__title {
   font-family: "Russo One";
@@ -292,7 +291,7 @@ html, body {
 
 /* ------ Advantages ------ */
 .advantages {
-  padding: 100px 0;
+  padding: 160px 0px 60px 0px;
 }
 .advantages .advantages__body {
   display: -webkit-box;
@@ -432,6 +431,8 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0px 50px 80px 50px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .types .types__body .types__icons .types__icon .types__img {
   width: 40px;
@@ -558,9 +559,6 @@ html, body {
   transition: 0.5s ease 0s;
 }
 .footer .footer__body .footer__offer {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
   margin: 0px 60px;
   color: #615F5F;
   font-size: 12px;

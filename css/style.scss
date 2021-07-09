@@ -151,8 +151,7 @@ html,body {
 			justify-content: center;
 
 			position: relative;
-			left: 1000px;
-			top: -600px;
+			left: -1000px;
 
 			.home__title {
 				font-family: "Russo One";
@@ -237,7 +236,7 @@ html,body {
 /* ------ Advantages ------ */
 
 .advantages {
-	padding: 100px 0;
+	padding: 160px 0px 60px 0px;
 
 	.advantages__body {
 		display: flex;
@@ -352,6 +351,7 @@ html,body {
 				flex-direction: column;
 				align-items: center;
 				margin: 0px 50px 80px 50px;
+				transition: all 0.5s ease 0s;
 
 				.types__img {
 					width: 40px;
@@ -503,7 +503,6 @@ html,body {
 			}
 		}
 		.footer__offer {
-			flex: 1 1 50%;
 			margin: 0px 60px;
 			color: #615F5F;
 			font-size: 12px;
