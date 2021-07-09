@@ -1,0 +1,254 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@400;500;700;900&display=swap');
+
+// Переменные  
+
+$dark: #1C1C1C;
+$light: #FAFAFA;
+$yellow: #FEC629;
+
+
+/* ------ Оболочка  ------ */
+
+html,body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	
+	font-family: "Roboto";
+	font-size: 18px;
+	font-weight: 400;
+	color: $dark;
+	position: relative;
+}
+
+
+/* ------ Контейнеры ------ */
+
+.container{
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0 30px;
+}
+
+.content {
+  /* Контент занимает всё место между header и footer */
+  flex: 1 1 auto;
+}
+
+
+/* ------ Header ------ */
+
+.header {
+	padding: 16px 0;
+	background: $dark;
+
+	color: $light;
+	font-family: "Russo One", sans-serif;
+
+
+	.header__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.header__logo {
+			display: flex;
+			align-items: center;
+			.header__img {
+				max-width: 40px;
+				margin: 0px 20px 0px 0px;
+			}
+			.header__img img {
+				width: 100%;
+			}
+			.header__name {
+				font-size: 18px;
+			}
+		}
+
+		.header__contact {
+			display: flex;
+			align-items: center;
+
+			.header__phone a {
+				text-decoration: none;
+				color: $light;
+			}
+			.header__insta {
+				max-width: 40px;
+				margin: 0px 0px 0px 20px;
+			}
+			.header__insta img {
+				width: 100%;
+			}
+		}
+
+	}
+}
+
+/* ------ Home ------ */
+
+.home {
+	background: $yellow;
+	color: $dark;
+	height: calc(100vh - 60px);
+
+	.home__body {
+		transition: 0.5s ease 0s;
+		display: flex;
+		margin: 0px -50px;
+
+		.home__text {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+
+			margin: 0px 50px;
+			.home__title {
+				font-family: "Russo One";
+				text-transform: uppercase;
+				font-size: 70px;
+
+				margin: 0px 0px 40px 0px;
+			}
+			.home__subtitle {
+				max-width: 450px;
+				font-weight: 500;
+				font-size: 24px;
+
+				margin: 0px 0px 50px 0px;
+			}
+			.home__btn a {
+				display: inline-block;
+				text-decoration: none;
+				background: $dark;
+				color: $light;
+				padding: 14px 40px;
+				border-radius: 5px;
+				font-family: "Russo One";
+			}
+			.home__btn a:hover {
+				background: #343434;
+				transition: 0.5s ease 0s;
+			}
+		}
+		.home__img {
+		}
+	}
+}
+
+
+/* ------ Advantages ------ */
+
+.advantages {
+	padding: 100px 0;
+
+	.advantages__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		font-family: "Russo One";
+		.advantages__title {
+			font-size: 36px;
+
+			margin: 0px 0px 100px 0px;
+		}
+		.advantages__icons {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			margin: 0px -50px 100px -50px;
+
+			.advantages__icon {
+				display: flex;
+				align-items: center;
+				margin: 0px 50px;
+
+				.advantages__img {
+					width: 50px;
+					margin: 0px 20px 0px 0px;
+				}
+				.advantages__img img {
+					width: 100%;
+				}
+				.advantages__text {}
+			}
+		}
+
+		.advantages__price {
+			font-size: 36px;
+
+			margin: 0px 0px 100px 0px;
+		}
+		.advantages__subtitle {
+			font-family: "Roboto";
+			max-width: 900px;
+
+			margin: 0px 0px 100px 0px;
+		}
+		.advantages__btn a {
+			display: inline-block;
+			text-decoration: none;
+			background: $yellow;
+			color: $light;
+			padding: 14px 40px;
+			border-radius: 5px;
+			font-family: "Russo One";
+		}
+	}
+}
+
+/* ------ Footer ------ */
+
+.footer	{
+	background: $dark;
+	color: $light;
+	padding: 100px 0;
+
+	.footer__body {
+		display: flex;
+		align-items: center;
+		margin: 0px -100px;
+
+		.footer__info {
+			margin: 0px 100px;
+			.footer__title {
+				font-family: "Russo One";
+				font-size: 36px;
+				margin: 0px 0px 20px 0px;
+			}
+			.footer__phone {
+				font-family: "Russo One";
+				margin: 0px 0px 20px 0px;
+			}
+			.footer__phone a {
+				text-decoration: none;
+				color: $light;
+			}
+			.footer__copyright {
+				margin: 0px 0px 20px 0px;
+			}
+			.footer__authors {
+				font-size: 24px;
+				margin: 0px 0px 20px 0px;
+			}
+			.footer__authors a {
+				color: $light;
+				text-decoration: none;
+				font-weight: 700;
+			}
+		}
+		.footer__offer {
+			color: #615F5F;
+			max-width: 550px;
+		}
+	}
+}

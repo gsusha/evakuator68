@@ -1,0 +1,333 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/* ------ Оболочка  ------ */
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  color: #1C1C1C;
+  position: relative;
+}
+
+/* ------ Контейнеры ------ */
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0 30px;
+}
+
+.content {
+  /* Контент занимает всё место между header и footer */
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+/* ------ Header ------ */
+.header {
+  padding: 16px 0;
+  background: #1C1C1C;
+  color: #FAFAFA;
+  font-family: "Russo One", sans-serif;
+}
+.header .header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header .header__body .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .header__body .header__logo .header__img {
+  max-width: 40px;
+  margin: 0px 20px 0px 0px;
+}
+.header .header__body .header__logo .header__img img {
+  width: 100%;
+}
+.header .header__body .header__logo .header__name {
+  font-size: 18px;
+}
+.header .header__body .header__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .header__body .header__contact .header__phone a {
+  text-decoration: none;
+  color: #FAFAFA;
+}
+.header .header__body .header__contact .header__insta {
+  max-width: 40px;
+  margin: 0px 0px 0px 20px;
+}
+.header .header__body .header__contact .header__insta img {
+  width: 100%;
+}
+
+/* ------ Home ------ */
+.home {
+  background: #FEC629;
+  color: #1C1C1C;
+  height: calc(100vh - 60px);
+}
+.home .home__body {
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px -50px;
+}
+.home .home__body .home__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 50px;
+}
+.home .home__body .home__text .home__title {
+  font-family: "Russo One";
+  text-transform: uppercase;
+  font-size: 70px;
+  margin: 0px 0px 40px 0px;
+}
+.home .home__body .home__text .home__subtitle {
+  max-width: 450px;
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0px 0px 50px 0px;
+}
+.home .home__body .home__text .home__btn a {
+  display: inline-block;
+  text-decoration: none;
+  background: #1C1C1C;
+  color: #FAFAFA;
+  padding: 14px 40px;
+  border-radius: 5px;
+  font-family: "Russo One";
+}
+.home .home__body .home__text .home__btn a:hover {
+  background: #343434;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+/* ------ Advantages ------ */
+.advantages {
+  padding: 100px 0;
+}
+.advantages .advantages__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Russo One";
+}
+.advantages .advantages__body .advantages__title {
+  font-size: 36px;
+  margin: 0px 0px 100px 0px;
+}
+.advantages .advantages__body .advantages__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px -50px 100px -50px;
+}
+.advantages .advantages__body .advantages__icons .advantages__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 50px;
+}
+.advantages .advantages__body .advantages__icons .advantages__icon .advantages__img {
+  width: 50px;
+  margin: 0px 20px 0px 0px;
+}
+.advantages .advantages__body .advantages__icons .advantages__icon .advantages__img img {
+  width: 100%;
+}
+.advantages .advantages__body .advantages__price {
+  font-size: 36px;
+  margin: 0px 0px 100px 0px;
+}
+.advantages .advantages__body .advantages__subtitle {
+  font-family: "Roboto";
+  max-width: 900px;
+  margin: 0px 0px 100px 0px;
+}
+.advantages .advantages__body .advantages__btn a {
+  display: inline-block;
+  text-decoration: none;
+  background: #FEC629;
+  color: #FAFAFA;
+  padding: 14px 40px;
+  border-radius: 5px;
+  font-family: "Russo One";
+}
+
+/* ------ Footer ------ */
+.footer {
+  background: #1C1C1C;
+  color: #FAFAFA;
+  padding: 100px 0;
+}
+.footer .footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px -100px;
+}
+.footer .footer__body .footer__info {
+  margin: 0px 100px;
+}
+.footer .footer__body .footer__info .footer__title {
+  font-family: "Russo One";
+  font-size: 36px;
+  margin: 0px 0px 20px 0px;
+}
+.footer .footer__body .footer__info .footer__phone {
+  font-family: "Russo One";
+  margin: 0px 0px 20px 0px;
+}
+.footer .footer__body .footer__info .footer__phone a {
+  text-decoration: none;
+  color: #FAFAFA;
+}
+.footer .footer__body .footer__info .footer__copyright {
+  margin: 0px 0px 20px 0px;
+}
+.footer .footer__body .footer__info .footer__authors {
+  font-size: 24px;
+  margin: 0px 0px 20px 0px;
+}
+.footer .footer__body .footer__info .footer__authors a {
+  color: #FAFAFA;
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer .footer__body .footer__offer {
+  color: #615F5F;
+  max-width: 550px;
+}
