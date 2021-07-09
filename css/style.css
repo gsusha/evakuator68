@@ -111,6 +111,7 @@ html, body {
   width: 100%;
   padding: 16px 0;
   background: #1C1C1C;
+  z-index: 50;
   color: #FAFAFA;
   font-family: "Russo One", sans-serif;
 }
@@ -166,15 +167,22 @@ html, body {
 /* ------ Home ------ */
 .home {
   background: #FEC629;
+  background-image: url("../img/whitebg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 4px left 4px;
   color: #1C1C1C;
-  height: calc(100vh - 61px);
+  height: 100vh;
+  position: relative;
 }
 .home .home__body {
   -webkit-transition: 0.5s ease 0s;
   transition: 0.5s ease 0s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
   margin: 0px -50px;
 }
 .home .home__body .home__text {
@@ -219,6 +227,12 @@ html, body {
   -webkit-transition: 0.5s ease 0s;
   transition: 0.5s ease 0s;
 }
+.home .home__body .home__img {
+  position: absolute;
+  top: 15%;
+  left: 40%;
+}
+
 /* ------ Advantages ------ */
 .advantages {
   padding: 100px 0;

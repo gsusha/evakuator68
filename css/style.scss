@@ -49,6 +49,7 @@ html,body {
 	width: 100%;
 	padding: 16px 0;
 	background: $dark;
+	z-index: 50;
 
 	color: $light;
 	font-family: "Russo One", sans-serif;
@@ -98,12 +99,22 @@ html,body {
 
 .home {
 	background: $yellow;
+	background-image: url("../img/whitebg.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top 4px left 4px;
 	color: $dark;
-	height: calc(100vh - 61px);
+	height: 100vh;
+
+	position: relative; 
 
 	.home__body {
 		transition: 0.5s ease 0s;
-		display: flex;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		height: 100vh;
 		margin: 0px -50px;
 
 		.home__text {
@@ -142,6 +153,9 @@ html,body {
 			}
 		}
 		.home__img {
+			position: absolute;
+			top: 15%;
+			left: 40%;
 		}
 	}
 }
