@@ -163,7 +163,7 @@ html, body {
 .home {
   background: #FEC629;
   color: #1C1C1C;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 61px);
 }
 .home .home__body {
   -webkit-transition: 0.5s ease 0s;
@@ -285,6 +285,55 @@ html, body {
 }
 
 /* ------ Footer ------ */
+.types {
+  padding: 100px 0;
+}
+.types .types__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.types .types__body .types__title {
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0px 0px 100px 0px;
+}
+.types .types__body .types__icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0px -50px;
+}
+.types .types__body .types__icons .types__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 50px 80px 50px;
+}
+.types .types__body .types__icons .types__icon .types__img {
+  width: 40px;
+  margin: 0px 80px 0px 0px;
+}
+.types .types__body .types__icons .types__icon .types-img img {
+  width: 100%;
+}
+.types .types__body .types__icons .types__icon .types__text {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* ------ Footer ------ */
 .footer {
   background: #1C1C1C;
   color: #FAFAFA;
@@ -319,7 +368,7 @@ html, body {
   margin: 0px 0px 20px 0px;
 }
 .footer .footer__body .footer__info .footer__authors {
-  font-size: 24px;
+  font-size: 18px;
   margin: 0px 0px 20px 0px;
 }
 .footer .footer__body .footer__info .footer__authors a {
